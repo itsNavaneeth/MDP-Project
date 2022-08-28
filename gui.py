@@ -96,7 +96,7 @@ def classify(file_path):
 
     sign = classes[pred+1]
     print(sign)
-    label.configure(foreground='#001fee', text=sign) 
+    label.configure(foreground='#1d3557', text=sign, font=('Poppins',20, 'bold')) 
 
 def run_superres(file_path):
     head, tail = os.path.split(file_path)
@@ -121,12 +121,12 @@ def run_superres(file_path):
 
 def show_superres_button(file_path):
     superres_b=Button(top,text="Enhance image",command=lambda: run_superres(file_path),padx=10,pady=5)
-    superres_b.configure(background='#e63946', foreground='white',font=('Poppins',10,'bold'))
+    superres_b.configure(background='#2ec4b6', foreground='white',font=('Poppins',14, 'bold'))
     superres_b.place(relx=0.79,rely=0.36)
 
 def show_classify_button(file_path):
     classify_b=Button(top,text="What is the sign?",command=lambda: classify(file_path),padx=10,pady=5)
-    classify_b.configure(background='#e63946', foreground='white',font=('Poppins',10,'bold'))
+    classify_b.configure(background='#e63946', foreground='white',font=('Poppins',14, 'bold'))
     classify_b.place(relx=0.79,rely=0.46)
 
 def upload_image():
@@ -146,7 +146,7 @@ def upload_image():
         pass
 
 upload=Button(top,text="Upload an image",command=upload_image,padx=10,pady=5)
-upload.configure(background='#e63946', foreground='white',font=('Poppins',10,'bold'))
+upload.configure(background='#e63946', foreground='white',font=('Poppins',14,'bold'))
 
 upload.pack(side=BOTTOM,pady=50)
 sign_image.pack(side=BOTTOM,expand=True)
